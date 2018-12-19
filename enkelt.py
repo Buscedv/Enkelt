@@ -4,7 +4,7 @@
 # Ett simpelt programeringspråk med Svensk syntax.
 # Developed by: Edvard Busck-Nielsen 11.12.2018
 # Utvecklat av: Edvard Busck-Nielsen 11.12.2018
-# 1.9
+# 2.0
 # GNU GPL v. 3.0
 
 import sys
@@ -245,12 +245,16 @@ def parse_expr(expr, line):
 	second = ""
 	second1 = ""
 	evaluation = ""
+	index = ""
+	the_list = ""
+	list_name = ""
 	lex_second = False
 	found_string = False
 	result = False
 
 	first_var_stat = False
 	second_var_stat = False
+	lex_index = False
 
 	for chr in expr:
 		if lex_second:
@@ -275,7 +279,20 @@ def parse_expr(expr, line):
 		for chr in first1:
 			first += chr
 		first_var_stat = True
-		first = Global_Variables[first[1:]]
+		if "[" in first and "]" in first:
+			for chr in first:
+				if lex_index and chr != " " and chr != "]":
+					index += chr
+				elif chr == "[":
+					lex_index = True
+				elif chr == "]":
+					lex_index = False
+				elif chr != " ":
+					list_name += chr
+			the_list = Global_Variables[list_name[1:]]
+			first = the_list[int(index)]
+		else:
+			first = Global_Variables[first[1:]]
 	if second[0] == "$":
 		for chr in second:
 			if chr != " ":
@@ -284,7 +301,20 @@ def parse_expr(expr, line):
 		for chr in second1:
 			second += chr
 		second_var_stat = True
-		second = Global_Variables[second[1:]]
+		if "[" in second and "]" in second:
+			for chr in second:
+				if lex_index and chr != " ":
+					index += chr
+				elif chr == "[":
+					lex_index = True
+				elif chr == "]":
+					lex_index = False
+				elif chr != " ":
+					list_name += chr
+			the_list = Global_Variables[list_name[1:]]
+			second = the_list[int(index)]
+		else:
+			second = Global_Variables[second[1:]]
 
 	if evaluation == "=":
 		if str(first) == str(second):
@@ -504,6 +534,7 @@ def var_func(code, line):
 	var_lex_name = False
 	get_list = False
 	get_index = False
+	open_s = False
 	var_name = ""
 	index = ""
 	list_name = ""
@@ -568,9 +599,23 @@ def var_func(code, line):
 				cmd += chr
 				if cmd == "var":
 					var_lex_name = True
+		# for chr in var_list:
+		# 	if chr != '"':
+		# 		var_list_tmp += chr
+		# var_list = ""
+		# for chr in var_list_tmp:
+		# 	var_list += chr
+		# var_list_tmp = ""
 		for chr in var_list:
-			if chr != '"':
+			if open_s and chr != '"':
 				var_list_tmp += chr
+			elif open_s and chr == '"':
+				open_s = False
+			elif open_s == False and chr != " ":
+				if chr == '"':
+					open_s = True
+				else:
+					var_list_tmp += chr
 		var_list = ""
 		for chr in var_list_tmp:
 			var_list += chr
