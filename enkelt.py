@@ -2,10 +2,27 @@
 # Enkelt: Programeringsspråk
 # A simple programming language with Swedish syntax.
 # Ett simpelt programeringspråk med Svensk syntax.
-# Developed by: Edvard Busck-Nielsen 11.12.2018
-# Utvecklat av: Edvard Busck-Nielsen 11.12.2018
-# 2.0
-# GNU GPL v. 3.0
+# 2.1
+
+# Edvard Busck-Nielsen, hereby disclaims all copyright interest in the program “Enkelt” (which is a programming language with swedish syntax) written by Edvard Busck-Nielsen.
+
+# signature of Edvard Busck-Nielsen 11 December 2018
+# Edvard Busck-Nielsen, Developer of Enkelt
+
+# © Copyright 2018, 2019 Edvard Busck-Nielsen
+
+# This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 import sys
 import os
@@ -599,13 +616,6 @@ def var_func(code, line):
 				cmd += chr
 				if cmd == "var":
 					var_lex_name = True
-		# for chr in var_list:
-		# 	if chr != '"':
-		# 		var_list_tmp += chr
-		# var_list = ""
-		# for chr in var_list_tmp:
-		# 	var_list += chr
-		# var_list_tmp = ""
 		for chr in var_list:
 			if open_s and chr != '"':
 				var_list_tmp += chr
