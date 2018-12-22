@@ -132,9 +132,9 @@ Du kan andvända dig av några oika uttryck i Om ().
 
 * !	Inte lika med/olika
 
-* <	Mindre än (bara nummer)
+* \<	Mindre än (bara nummer)
 
-* >	Större än (bara nummer)
+* \>	Större än (bara nummer)
 
 # Kommentarer
 Kommentarer är linjer i din kod som ignoreras när koden körs. Detta är praktiskt om du vill organisera din kod och göra den enklare att förstå med hjälp av förklaringar, titlar mm. Alla linjer som börjar med # är en kommentar.
