@@ -128,18 +128,21 @@ Hej Jonas
 Du kan andvända dig av några oika uttryck i Om ().
 
 ### Uttryck	Beskrivnng
-=	Lika med/samma
-!	Inte lika med/olika
-<	Mindre än (bara nummer)
->	Större än (bara nummer)
+* =	Lika med/samma
+
+* !	Inte lika med/olika
+
+* <	Mindre än (bara nummer)
+
+* >	Större än (bara nummer)
 
 # Kommentarer
 Kommentarer är linjer i din kod som ignoreras när koden körs. Detta är praktiskt om du vill organisera din kod och göra den enklare att förstå med hjälp av förklaringar, titlar mm. Alla linjer som börjar med # är en kommentar.
 
 ### Ex.
 skriv ("Hej Världen!")
-# Detta är en kommentar
-# skriv ("hej")
+\# Detta är en kommentar
+\# skriv ("hej")
 skriv ("Test 123...")
 
 ### Utput
@@ -154,6 +157,6 @@ skriv ("Hej Världen!")
 töm
 skriv ("Test")
 
-###Utput
+### Utput
 Test
                                         
