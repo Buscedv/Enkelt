@@ -177,8 +177,8 @@ Kommentarer är linjer i din kod som ignoreras när koden körs. Detta är prakt
 ### Ex.
 ```python
 skriv ("Hej Världen!")
-\# Detta är en kommentar
-\# skriv ("hej")
+# Detta är en kommentar
+# skriv ("hej")
 skriv ("Test 123...")
 ```
 ### Utput
