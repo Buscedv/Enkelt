@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Enkelt | Dokumentation</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enkelt är ett programmerisspråk med svensk syntax.">
+    <meta name="author" content="Edvard Busck-Nielsen">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+</head> 
+
+<body class="body-pink">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">Enkelt</span><span class="text-bold">Docs</span>
+                        </a>
+                    </h1>
+                </div><!--//branding-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Hem</a></li>
+                    <li class="breadcrumb-item active">Dokumentation</li>
+                </ol>
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><span aria-hidden="true" class="icon icon_puzzle_alt"></span> Dokumentation</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Senast Uppdaterad: Dec 22, 2018</div>
+                </div><!--//doc-header-->
+                <div class="doc-body row" >
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="skriv" class="doc-section">
+                                <h2 class="section-title">Skriv ()</h2>
+                                <div id="skriv1" class="section-block">
+                                    <p><i>Skriv ()</i> funktionen skriver text och/eller data till konsolen. <i>Skriv ()</i> funktionen kan inte läggas in i andra fuktioner.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Skriv Text/String</h6>
+                                        <p><code>skriv ("Hej Världen")</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="other_skriv"  class="section-block">
+                                    <h3 class="block-title">Andra tillämpningar av <i>Skriv ()</i>:</h3>
+                                    <p><i>Skriv ()</i> kan skriva olika sorters data; Här är alla olika typer fuktionen accepterar.
+                                    </p>
+                                    <div class="code-block" id="skriv2">
+                                        <h6>Skriv Variabel</h6>
+                                        <p><code>skriv ($variabel_namn)</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="skriv3">
+                                        <h6>Skriv Sak från lista (med index nummer)</h6>
+                                        <p><code>skriv ($lista[1])</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="var" class="doc-section">
+                                <h2 class="section-title">Variabler</h2>
+                                <div id="var1" class="section-block">
+                                    <p>Variabler sparar data under ett namn och kan hämtas med att skriva <b>$</b> och variabelnamnet efter.
+                                    </p>
+                                    <div id="var1" class="code-block">
+                                        <h6>Text/String Variabel</h6>
+                                        <p><code>var min_string = "Hej Världen"</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="other_var"  class="section-block">
+                                    <h3 class="block-title">Andra variabel datatyper.</h3>
+                                    <p>Du kan spara <i>text, andvändarinput, nummer, matematiklösningar, listor, kombinerade variabler och saker från listor (Med index) och längd av text, nummer och listor (Antal saker)</i>. 
+                                    </p>
+                                    <div class="code-block" id="var2">
+                                        <h6>Andvändarinput Variabel</h6>
+                                        <p><code>var namn = in("Skriv Ditt Namn: ")</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="var3">
+                                        <h6>Nummer Variabel</h6>
+                                        <p><code>var num1 = 2</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="var4">
+                                        <h6>Matematik Variabel (Med nummer)</h6>
+                                        <p><code>var resultat = matte(2*3)</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="var5">
+                                        <h6>Matematik Variabel (Med variabler)</h6>
+                                        <p><code>var resultat = matte($num1 + 3)</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="var6">
+                                        <h6>List Variabel (Text och nummer)</h6>
+                                        <p><code>var inköp = ["bröd", "smör", "ägg", "mjölk", 1, 4]</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="var7">
+                                        <h6>Kombinerade Variabler</h6>
+                                        <p><code>var tittel = "Hej, " + $namn</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="var8">
+                                        <h6>Sak Från Lista Variabel (Med indexnummer)</h6>
+                                        <p><code>var smör = $inköp[1]</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="var9">
+                                        <h6>Sak Från Lista Variabel (Med index från variabel)</h6>
+                                        <p><code>var smör = $inköp[$indx]</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="var10">
+                                        <h6>List Längd Variabel</h6>
+                                        <p><code>var min_lista = längd($lista1)</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="var11">
+                                        <h6>Text/String Längd Variabel</h6>
+                                        <p><code>var min_text = längd("Hej")</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block" id="var12">
+                                        <h6>Variabel Längd Variabel</h6>
+                                        <p><code>var min_text = längd($text)</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="list" class="doc-section">
+                                <h2 class="section-title">Listor</h2>
+                                <div id="other_list" class="section-block">
+                                    <p>Listor är en variabel datatyp där du kan spara flera texter, mummer etc. i samma variabel och uder samma variabelnamn.
+                                        <b>Ex.</b><br>
+                                        Listan inköp ser ut så här:
+                                        <i>["bröd", "ägg", "mjök"]</i>
+                                        Om vi kallar listan <i>inköp</i>, kan man skriva ut hela listan med att skriva:
+                                        <i>skriv ($inköp)</i>
+                                        Då skulle man se hela listan men om du vill få ut en skild sak från listan måste du specifiera sakens <b>indexnummer</b>. Varje sak i listan har ett eget indexnummer.
+                                        <i>'bröd'</i> skulle ha indexen <b>0</b> eftersom <i>'bröd'</i> är den <b>första</b> saken i listan och listor börjar från <i>0</i> inte <i>1</i>!
+                                    </p>
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">OBS Indexnummer!</h4>
+                                            <p>Kom ihåg att listor alltid <b>börjar med 0 och inte 1</b></p>
+                                        </div><!--//content-->
+                                    </div>
+                                    <div id="list1" class="code-block">
+                                        <h6>Gör en ny lista</h6>
+                                        <p><code>var inköp = ["bröd", "ägg", "mjölk"]</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="other_list"  class="section-block">
+                                    <h3 class="block-title">Andra Listfunktioner</h3>
+                                    <p>Du kan se hur man andväder listor med variabler under <b>Variabel</b> sektionen av dokumentationen, här är bara de specifika funktionerna som bara listor har!
+                                    </p>
+                                    <div id="list2" class="code-block">
+                                        <h6>Lägg Till Sak</h6>
+                                        <p><code>$inköp.till("smör")</code></p>
+                                    </div><!--//code-block-->
+                                    <div id="list3" class="code-block">
+                                        <h6>Ta Bort Sak Från Lista</h6>
+                                        <p><code>$inköp.bort[2]</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="math" class="doc-section">
+                                <h2 class="section-title">Matte ()</h2>
+                                <div id="step1" class="section-block">
+                                    <p><i>Matte ()</i> funktionen kan andvändas själv eller sättas in i variabler. <i>Matte ()</i> funktionen tar in två tal i antigen nummerform (heltal) eller nummervariabelform samt ett utryck (+, -, *, /, %).
+                                    </p>
+                                    <div id="math1" class="code-block">
+                                        <h6>Addition</h6>
+                                        <p><code>matte (1+2)</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="step2"  class="section-block">
+                                    <h3 class="block-title">Andra Räknesätt</h3>
+                                    <p>Du kan kombinera variabler med nummer så här:
+                                        <i>(1+2)</i> eller <i>($num1+$num2)</i> eller <i>(1+$num1)</i> eller <i>($num2+3)</i>.
+                                    </p>
+                                    <div id="math2" class="code-block">
+                                        <h6>Subtraktion</h6>
+                                        <p><code>matte (1-2)</code></p>
+                                    </div><!--//code-block-->
+                                    <div id="math3" class="code-block">
+                                        <h6>Multiplikation</h6>
+                                        <p><code>matte (1*2)</code></p>
+                                    </div><!--//code-block-->
+                                    <div id="math4" class="code-block">
+                                        <h6>Division</h6>
+                                        <p><code>matte (1/2)</code></p>
+                                    </div><!--//code-block-->
+                                    <div id="math5" class="code-block">
+                                        <h6>Moduloräkning</h6>
+                                        <p><code>matte (1%2)</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="ifelse" class="doc-section">
+                                <h2 class="section-title">Om () & Annars ()</h2>
+                                <div id="other_annars" class="section-block">
+                                    <p><i>Om ()</i> och <i>Annars ()</i> går hand i hand och fungerar tillsammans.
+                                    <i>Om ()</i> låter dig testa olika saker. Du kan t.ex. kolla om en variabel är lika med en annan variabel, om ett nummer är större en ett annat nummer osv. Om uttrycket i <i>Om ()</i> stämmer körs koden innuti <i>Om ()</i> parenteserna <b>{}</b> medan koden innuti <i>Annars ()</i> pareneteser <b>{}</b> körs bara om uttrycket i <i>Om ()</i> är falsk/inte stämmer. Du kan bara andvända <i>Annars ()</i> om du ocskå andvänder <i>Om ()</i>, men du kan andvända <i>Om ()</i> ensamt.
+                                    <br>
+                                    Här är några exempel på hur du andvänder <i>Om ()</i> och <i>Annars ()</i>:
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Kolla om ett tal är störe än ett annant:</h6>
+                                        <p>
+                                            <pre><code class="language-python">var num1 = 2
+var num2 = 4
+om ($num1 > $num2) {
+    skriv ("Större än!")
+}
+annars {
+    skriv ("Inte större än!")
+}
+                                            </code></pre>
+                                            <div class="code-block">
+                                                <h6>Utput:</h6>
+                                                    <p><code>Inte större än!</code></p>
+                                            </div><!--//code-block-->
+                                            <br>
+
+                                        </p>
+                                    </div><!--//code-block-->
+
+                                    <div class="code-block">
+                                        <h6>Kolla vad advändaren skrev</h6>
+                                        <p>
+                                            <pre><code class="language-python">var namn = in ("Skriv Ditt Namn: ")
+om ($namn = "Jonas") {
+    skriv ("Hej Jonas")
+}
+                                            </code></pre>
+                                            <div class="code-block">
+                                                <h6>Utput:</h6>
+                                                    <p><pre><code class="language-python">Skriv Ditt Namn: Jonas
+Hej Jonas
+                                                    </code></pre></p>
+                                            </div><!--//code-block-->
+                                            <br>
+                                            
+                                        </p>
+                                    </div><!--//code-block-->
+
+                                </div><!--//section-block-->
+                                <div id="ifelse1"  class="section-block">
+                                    <h3 class="block-title">Uttryck</h3>
+                                    <p>Du kan andvända dig av några oika uttryck i <i>Om ()</i>.
+                                    </p>
+                                    <div class="section-block">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Uttryck</th>
+                                                    <th>Beskrivnng</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">=</th>
+                                                    <td>Lika med/samma</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">!</th>
+                                                    <td>Inte lika med/olika</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><</th>
+                                                    <td>Mindre än (bara nummer)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">></th>
+                                                    <td>Större än (bara nummer)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div><!--//table-responsive-->
+                                </div><!--//section-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="comments" class="doc-section">
+                                <h2 class="section-title">Kommentarer</h2>
+                                <div id="step1" class="section-block">
+                                    <p>Kommentarer är linjer i din kod som ignoreras när koden körs. Detta är praktiskt om du vill organisera din kod och göra den enklare att förstå med hjälp av förklaringar, titlar mm.
+                                        Alla linjer som börjar med <i>#</i> är en <b>kommentar</b>.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Ex.</h6>
+                                        <p><pre><code class="language-python">skriv ("Hej Världen!")
+# Detta är en kommentar
+# skriv ("hej")
+skriv ("Test 123...")</code></pre></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block">
+                                        <h6>Utput</h6>
+                                        <p><pre><code class="language-bash">
+Hej Världen!
+Test 123...
+                                        </code></pre></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="clear" class="doc-section">
+                                <h2 class="section-title">Töm</h2>
+                                <div id="step1" class="section-block">
+                                    <p><i>Töm</i> kommandot tömmer konsolen (Terminal, Kommandotolken). Detta kan vara praktiskt om din kod behöver visa mycket information.
+                                    </p>
+                                    <div class="code-block">
+                                        <h6>Ex.</h6>
+                                        <p><pre><code class="language-python">skriv ("Hej Världen!")
+töm
+skriv ("Test")</code></pre></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block">
+                                        <h6>Utput</h6>
+                                        <p><pre><code class="language-bash">
+Test
+                                        </code></pre></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex" style="height: auto;">
+                        <div id="doc-nav" class="doc-nav">
+                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                <a class="nav-link scrollto" href="#skriv">Skriv ()</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#skriv1">Text/String</a>
+                                        <a class="nav-link scrollto" href="#skriv2">Variabel</a>
+                                        <a class="nav-link scrollto" href="#skriv3">Sak Från Lista</a>
+                                    </nav><!--//nav-->
+                                <a class="nav-link scrollto" href="#var">Variabler</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#var1">Text/String</a>
+                                        <a class="nav-link scrollto" href="#var2">Andvändar Input</a>
+                                        <a class="nav-link scrollto" href="#var3">Nummer</a>
+                                        <a class="nav-link scrollto" href="#var4">Matematik (Nummer)</a>
+                                        <a class="nav-link scrollto" href="#var5">Matematik (Variabler)</a>
+                                        <a class="nav-link scrollto" href="#var6">Lista</a>
+                                        <a class="nav-link scrollto" href="#var7">Kombinerade</a>
+                                        <a class="nav-link scrollto" href="#var8">Sak Från Lista</a>
+                                        <a class="nav-link scrollto" href="#var9">Sak Från Lista Med indexvariabel</a>
+                                        <a class="nav-link scrollto" href="#var10">List Längd</a>
+                                        <a class="nav-link scrollto" href="#var11">Text/String Längd</a>
+                                        <a class="nav-link scrollto" href="#var12">Variabel Längd</a>
+                                    </nav><!--//nav-->
+                                <a class="nav-link scrollto" href="#list">Listor</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#list1">Gör En Ny Lista</a>
+                                        <a class="nav-link scrollto" href="#list2">Lägg Till Sak</a>
+                                        <a class="nav-link scrollto" href="#list3">Ta Bort Sak Från Lista</a>
+                                    </nav><!--//nav-->
+                                <a class="nav-link scrollto" href="#math">Matte ()</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#math1">Addition</a>
+                                        <a class="nav-link scrollto" href="#math2">Subtraktion</a>
+                                        <a class="nav-link scrollto" href="#math3">Multiplikation</a>
+                                        <a class="nav-link scrollto" href="#math4">Division</a>
+                                        <a class="nav-link scrollto" href="#math5">Moduloräkning</a>
+                                    </nav><!--//nav-->
+                                <a class="nav-link scrollto" href="#ifelse">Om / Annars</a>
+                                <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#ifelse1">Uttryck</a>
+                                    </nav><!--//nav-->
+                                <a class="nav-link scrollto" href="#comments">Kommentarer</a>
+                                <a class="nav-link scrollto" href="#clear">Töm</a>
+                            </nav><!--//doc-menu-->
+                        </div><!--//doc-nav-->
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->  
+                <img src="assets/banner.png" alt="Enkelt Programmeringsspråk">            
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Copyright &copy; Edvard Busck-Nielsen 2018</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                              
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
