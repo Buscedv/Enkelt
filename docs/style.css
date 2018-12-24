@@ -1,0 +1,66 @@
+#logo_res {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+}
+
+#to_top_btn {
+  	position: fixed; /* Fixed/sticky position */
+  	bottom: 20px; /* Place the button at the bottom of the page */
+  	right: 30px; /* Place the button 30px from the right */
+  	z-index: 99; /* Make sure it does not overlap */
+  	border: none; /* Remove borders */
+  	outline: none; /* Remove outline */
+  	color: #2f2f2f; /* Text color */
+  	cursor: pointer; /* Add a mouse pointer on hover */
+  	padding: 15px; /* Some padding */
+  	border-radius: 10px; /* Rounded corners */
+  	font-size: 18px; /* Increase font size */
+}
+
+#to_top_btn:hover {
+	color: black;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+
+input[type=submit] {
+  background-color: #2f2f2f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  color: #f4f4f4f4;
+}
+
+.container_form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
