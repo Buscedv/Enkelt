@@ -2,7 +2,7 @@
 # Enkelt: Programeringsspråk
 # A simple programming language with Swedish syntax.
 # Ett simpelt programeringspråk med Svensk syntax.
-# 2.1
+# 2.2
 
 # Edvard Busck-Nielsen, hereby disclaims all copyright interest in the program “Enkelt” (which is a programming language with swedish syntax) written by Edvard Busck-Nielsen.
 
@@ -150,7 +150,11 @@ def lenght_func(code, line):
 		for chr in data1:
 			if chr != " " and chr != "$":
 				data += chr
-		data = Global_Variables[data]
+		if data in Global_Variables:
+			data = Global_Variables[data]
+		else:
+			print ("Error linje "+str(line)+" variabeln '"+data+"' hittades inte!")
+			return "error!"
 	elif data1[0] == '"':
 		for chr in data1:
 			if chr != '"':
@@ -191,8 +195,15 @@ def list_remove(code, line):
 		elif chr == "$":
 			get_list_name = True
 	if index[0] == "$":
-		index = Global_Variables[index[1:]]
-	the_list = Global_Variables[list_name]
+		if index[1:] in Global_Variables:
+			index = Global_Variables[index[1:]]
+		else:
+			print ("Error linje "+str(line)+" variabeln '"+index[1:]+"' hittades inte!")
+	if list_name in Global_Variables:
+		the_list = Global_Variables[list_name]
+	else:
+		print ("Error linje "+str(line)+" variabeln '"+list_name+"' hittades inte!")
+
 	del the_list[int(index)]
 
 
@@ -210,7 +221,10 @@ def list_add(code, line):
 	for chr in code:
 		if get_var_item:
 			if chr == ")":
-				list_item = Global_Variables[list_item]
+				if list_item in Global_Variables:
+					list_item = Global_Variables[list_item]
+				else:
+					print ("Error linje "+str(line)+" variabeln '"+list_item+"' hittades inte!")
 				break
 			elif chr != " ":
 				list_item += chr
@@ -247,8 +261,11 @@ def list_add(code, line):
 				list_name += chr
 		elif chr == "$":
 			get_list_name = True
-	the_list = Global_Variables[list_name]
-	the_list.append(list_item)
+	if list_name in Global_Variables:
+		the_list = Global_Variables[list_name]
+		the_list.append(list_item)
+	else:
+		print ("Error linje "+str(line)+" variabeln '"+list_name+"' hittades inte!")
 
 def annars_func(code, line):
 	global global_is_an
@@ -306,10 +323,17 @@ def parse_expr(expr, line):
 					lex_index = False
 				elif chr != " ":
 					list_name += chr
-			the_list = Global_Variables[list_name[1:]]
-			first = the_list[int(index)]
+			if list_name[1:] in Global_Variables:
+				the_list = Global_Variables[list_name[1:]]
+				first = the_list[int(index)]
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+list_name[1:]+"' hittades inte!")
 		else:
-			first = Global_Variables[first[1:]]
+			if first[1:] in Global_Variables:
+
+				first = Global_Variables[first[1:]]
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+first[1:]+"' hittades inte!")
 	if second[0] == "$":
 		for chr in second:
 			if chr != " ":
@@ -328,10 +352,16 @@ def parse_expr(expr, line):
 					lex_index = False
 				elif chr != " ":
 					list_name += chr
-			the_list = Global_Variables[list_name[1:]]
-			second = the_list[int(index)]
+			if list_name[1:] in Global_Variables:
+				the_list = Global_Variables[list_name[1:]]
+				second = the_list[int(index)]
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+list_name[1:]+"' hittades inte!")
 		else:
-			second = Global_Variables[second[1:]]
+			if second[1:] in Global_Variables:
+				second = Global_Variables[second[1:]]
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+second[1:]+"' hittades inte!")
 
 	if evaluation == "=":
 		if str(first) == str(second):
@@ -410,88 +440,148 @@ def math_parse(num1, expr, num2, line):
 			result = int(num1)+int(num2)
 			return result
 		elif num1_var == True and num2_var == True:
-			num1 = Global_Variables[num1[1:]]
-			num2 = Global_Variables[num2[1:]]
-			result = int(num1)+int(num2)
-			return result
+			if num1[1:] in Global_Variables and num2[1:] in Global_Variables:
+				num1 = Global_Variables[num1[1:]]
+				num2 = Global_Variables[num2[1:]]
+				result = int(num1)+int(num2)
+				return result
+			else:
+				if num1[1:] not in Global_Variables:
+					print ("Error linje "+str(line)+" variabeln '"+num1[1:]+"' hittades inte!")
+				if num2[1:] not in Global_Variables:
+					print ("Error linje "+str(line)+" variabeln '"+num2[1:]+"' hittades inte!")
 		elif num1_var == True and num2_var == False:
-			num1 = Global_Variables[num1[1:]]
-			result = int(num1)+int(num2)
-			return result
+			if num1[1:] in Global_Variables:
+				num1 = Global_Variables[num1[1:]]
+				result = int(num1)+int(num2)
+				return result
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+num1[1:]+"' hittades inte!")
 		elif num1_var == False and num2_var == True:
-			num2 = Global_Variables[num2[1:]]
-			result = int(num1)+int(num2)
-			return result
+			if num2[1:] in Global_Variables:
+				num2 = Global_Variables[num2[1:]]
+				result = int(num1)+int(num2)
+				return result
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+num2[1:]+"' hittades inte!")
 	elif expr == "-":
 		if num1_var == False and num2_var == False:
 			result = int(num1)-int(num2)
 			return result
 		elif num1_var == True and num2_var == True:
-			num1 = Global_Variables[num1[1:]]
-			num2 = Global_Variables[num2[1:]]
-			result = int(num1)-int(num2)
-			return result
+			if num1[1:] in Global_Variables and num2[1:] in Global_Variables:
+				num1 = Global_Variables[num1[1:]]
+				num2 = Global_Variables[num2[1:]]
+				result = int(num1)-int(num2)
+				return result
+			else:
+				if num1[1:] not in Global_Variables:
+					print ("Error linje "+str(line)+" variabeln '"+num1[1:]+"' hittades inte!")
+				if num2[1:] not in Global_Variables:
+					print ("Error linje "+str(line)+" variabeln '"+num2[1:]+"' hittades inte!")
 		elif num1_var == True and num2_var == False:
-			num1 = Global_Variables[num1[1:]]
-			result = int(num1)-int(num2)
-			return result
+			if num1[1:] in Global_Variables:
+				num1 = Global_Variables[num1[1:]]
+				result = int(num1)-int(num2)
+				return result
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+num1[1:]+"' hittades inte!")
 		elif num1_var == False and num2_var == True:
-			num2 = Global_Variables[num2[1:]]
-			result = int(num1)-int(num2)
-			return result
+			if num2[1:] in Global_Variables:
+				num2 = Global_Variables[num2[1:]]
+				result = int(num1)-int(num2)
+				return result
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+num2[1:]+"' hittades inte!")
 	elif expr == "*":
 		if num1_var == False and num2_var == False:
 			result = int(num1)*int(num2)
 			return result
 		elif num1_var == True and num2_var == True:
-			num1 = Global_Variables[num1[1:]]
-			num2 = Global_Variables[num2[1:]]
-			result = int(num1)*int(num2)
-			return result
+			if num1[1:] in Global_Variables and num2[1:] in Global_Variables:
+				num1 = Global_Variables[num1[1:]]
+				num2 = Global_Variables[num2[1:]]
+				result = int(num1)*int(num2)
+				return result
+			else:
+				if num1[1:] not in Global_Variables:
+					print ("Error linje "+str(line)+" variabeln '"+num1[1:]+"' hittades inte!")
+				if num2[1:] not in Global_Variables:
+					print ("Error linje "+str(line)+" variabeln '"+num2[1:]+"' hittades inte!")
 		elif num1_var == True and num2_var == False:
-			num1 = Global_Variables[num1[1:]]
-			result = int(num1)*int(num2)
-			return result
+			if num1[1:] in Global_Variables:
+				num1 = Global_Variables[num1[1:]]
+				result = int(num1)*int(num2)
+				return result
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+num1[1:]+"' hittades inte!")
 		elif num1_var == False and num2_var == True:
-			num2 = Global_Variables[num2[1:]]
-			result = int(num1)*int(num2)
-			return result
+			if num2[1:] in Global_Variables:
+				num2 = Global_Variables[num2[1:]]
+				result = int(num1)*int(num2)
+				return result
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+num2[1:]+"' hittades inte!")
 	elif expr == "/":
 		if num1_var == False and num2_var == False:
 			result = int(num1)/int(num2)
 			return result
 		elif num1_var == True and num2_var == True:
-			num1 = Global_Variables[num1[1:]]
-			num2 = Global_Variables[num2[1:]]
-			result = int(num1)/int(num2)
-			return result
+			if num1[1:] in Global_Variables and num2[1:] in Global_Variables:
+				num1 = Global_Variables[num1[1:]]
+				num2 = Global_Variables[num2[1:]]
+				result = int(num1)/int(num2)
+				return result
+			else:
+				if num1[1:] not in Global_Variables:
+					print ("Error linje "+str(line)+" variabeln '"+num1[1:]+"' hittades inte!")
+				if num2[1:] not in Global_Variables:
+					print ("Error linje "+str(line)+" variabeln '"+num2[1:]+"' hittades inte!")
 		elif num1_var == True and num2_var == False:
-			num1 = Global_Variables[num1[1:]]
-			result = int(num1)/int(num2)
-			return result
+			if num1[1:] in Global_Variables:
+				num1 = Global_Variables[num1[1:]]
+				result = int(num1)/int(num2)
+				return result
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+num1[1:]+"' hittades inte!")
 		elif num1_var == False and num2_var == True:
-			num2 = Global_Variables[num2[1:]]
-			result = int(num1)/int(num2)
-			return result
+			if num2[1:] in Global_Variables:
+				num2 = Global_Variables[num2[1:]]
+				result = int(num1)/int(num2)
+				return result
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+num2[1:]+"' hittades inte!")
 	elif expr == "%":
 		if num1_var == False and num2_var == False:
 			result = int(num1)%int(num2)
 			return result
 		elif num1_var == True and num2_var == True:
-			num1 = Global_Variables[num1[1:]]
-			num2 = Global_Variables[num2[1:]]
-			result = int(num1)%int(num2)
-			return result
+			if num1[1:] in Global_Variables and num2[1:] in Global_Variables:
+				num1 = Global_Variables[num1[1:]]
+				num2 = Global_Variables[num2[1:]]
+				result = int(num1)%int(num2)
+				return result
+			else:
+				if num1[1:] not in Global_Variables:
+					print ("Error linje "+str(line)+" variabeln '"+num1[1:]+"' hittades inte!")
+				if num2[1:] not in Global_Variables:
+					print ("Error linje "+str(line)+" variabeln '"+num2[1:]+"' hittades inte!")
 		elif num1_var == True and num2_var == False:
-			num1 = Global_Variables[num1[1:]]
-			result = int(num1)%int(num2)
-			return result
+			if num1[1:] in Global_Variables:
+				num1 = Global_Variables[num1[1:]]
+				result = int(num1)%int(num2)
+				return result
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+num1[1:]+"' hittades inte!")
 		elif num1_var == False and num2_var == True:
-			num2 = Global_Variables[num2[1:]]
-			result = int(num1)%int(num2)
-			return result
+			if num2[1:] in Global_Variables:
+				num2 = Global_Variables[num2[1:]]
+				result = int(num1)%int(num2)
+				return result
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+num2[1:]+"' hittades inte!")
 	else:
-		print ("Error linje nr. "+line+" matte()")			
+		print ("Error linje nr. "+line+" matte ()")
 
 def math_func(code, line):
 	cmd = ""
@@ -520,7 +610,7 @@ def math_func(code, line):
 			cmd_found = True
 			lex_math = True
 		elif cmd_found == False:
-			if chr != " ":				
+			if chr != " ":
 				cmd += chr
 				if cmd == "matte" and lex_math == False:
 					cmd_found = True
@@ -570,7 +660,7 @@ def var_func(code, line):
 						get_list = False
 					else:
 						list_name += chr
-			elif var_lex_list:	
+			elif var_lex_list:
 				if chr == "$":
 					get_list = True
 					var_lex_list = False
@@ -588,9 +678,12 @@ def var_func(code, line):
 				if cmd == "var":
 					var_lex_name = True
 		if index[0] == "$":
-			index = Global_Variables[index[1:]]
-		result = Global_Variables[list_name]
-		result = result[int(index)]
+			if index[1:] in Global_Variables:
+				index = Global_Variables[index[1:]]
+				result = Global_Variables[list_name]
+				result = result[int(index)]
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+index[1:]+"' hittades inte!")
 	elif "[" in code and "]" in code and "$" not in code and "=" in code:
 		for chr in code:
 			if var_lex_list:
@@ -704,8 +797,8 @@ def var_func(code, line):
 					first_val = True
 				else:
 					if chr != " ":
-						var_name += chr	
-			
+						var_name += chr
+
 			elif var_stat:
 				if chr == '+' and first != "":
 					second_val = True
@@ -759,12 +852,16 @@ def var_func(code, line):
 			second = ""
 			second = second1
 		if first[0] == "$":
-			first = Global_Variables[first[1:]]
+			if first[1:] in Global_Variables:
+				first = Global_Variables[first[1:]]
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+first[1:]+"' hittades inte!")
 		if second[0] == "$":
-			second = Global_Variables[second[1:]]
+			if second[1:] in Global_Variables:
+				second = Global_Variables[second[1:]]
+			else:
+				print ("Error linje "+str(line)+" variabeln '"+second[1:]+"' hittades inte!")
 		result = str(first)+str(second)
-
-
 
 	elif "längd" in code and "(" in code and ")" in code:
 		var_lex_data = False
@@ -829,8 +926,8 @@ def var_func(code, line):
 				else:
 					if chr != " ":
 						var_name += chr
-				
-			
+
+
 			elif var_stat:
 				if chr == '"' and var_stat_first:
 					string += chr
@@ -876,7 +973,7 @@ def var_func(code, line):
 				else:
 					if chr != " ":
 						var_name += chr
-			
+
 			elif var_stat:
 				if chr != ")":
 					to_claculate += chr
@@ -936,7 +1033,10 @@ def var_func(code, line):
 		for chr in result1:
 			result += chr
 		var_name = int_name
-		result = Global_Variables[result[1:]]
+		if result[1:] in Global_Variables:
+			result = Global_Variables[result[1:]]
+		else:
+			print ("Error linje "+str(line)+" variabeln '"+result[1:]+"' hittades inte!")
 	else:
 		cmd = ""
 		int_stat = False
@@ -1014,9 +1114,12 @@ def print_func(code, line):
 						list_name += chr
 			elif chr == "$":
 				list_lex_name = True
-		the_list = Global_Variables[list_name]
-		string = the_list[int(indx)]
-		is_list = True
+		if list_name in Global_Variables:
+			the_list = Global_Variables[list_name]
+			string = the_list[int(indx)]
+			is_list = True
+		else:
+			print ("Error linje "+str(line)+" variabeln '"+list_name+"' hittades inte!")
 	elif '$' in code and '"' not in code:
 		for chr in code:
 			if print_lex and chr == ")":
@@ -1054,8 +1157,11 @@ def print_func(code, line):
 				if print_lex == False and chr != " ":
 					cmd += chr
 	if was_variable:
-		string = Global_Variables[string]
-		return string
+		if string in Global_Variables:
+			string = Global_Variables[string]
+			return string
+		else:
+			print ("Error linje "+str(line)+" variabeln '"+string+"' hittades inte!")
 	elif is_list:
 		return string
 	else:
