@@ -1159,7 +1159,7 @@ def print_func(code, line):
 			else:
 				if print_lex == False and chr != " ":
 					cmd += chr
-					if cmf == "skriv":
+					if cmd == "skriv":
 						print_lex = True
 	if was_variable:
 		if string in Global_Variables:
