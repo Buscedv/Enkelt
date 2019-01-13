@@ -2,7 +2,8 @@
 # Enkelt: Programeringsspråk
 # A simple programming language with Swedish syntax.
 # Ett simpelt programeringspråk med Svensk syntax.
-# 2.2
+# https://buscedv.github.io/Enkelt
+# 2.3
 
 # Edvard Busck-Nielsen, hereby disclaims all copyright interest in the program “Enkelt” (which is a programming language with swedish syntax) written by Edvard Busck-Nielsen.
 
@@ -1137,6 +1138,8 @@ def print_func(code, line):
 				print_lex = True
 			elif print_lex == False and chr != " ":
 				cmd += chr
+				if cmd == "skriv":
+					print_lex = True
 	else:
 		for chr in code:
 			if print_lex and chr == ")":
@@ -1156,6 +1159,8 @@ def print_func(code, line):
 			else:
 				if print_lex == False and chr != " ":
 					cmd += chr
+					if cmf == "skriv":
+						print_lex = True
 	if was_variable:
 		if string in Global_Variables:
 			string = Global_Variables[string]
