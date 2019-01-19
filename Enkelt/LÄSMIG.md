@@ -5,9 +5,9 @@
 Du måste ha enkely.py filen i samma mapp som din kodfil är i.
 Ex. om du har en fil som heter 'kod.e' så kör du den genom att skriva:
 
-´´´
+´´´´
 $ python3 enkely.py kod.e
-´´´
+´´´´
 
 I terminalen.
 
