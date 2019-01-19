@@ -3,11 +3,11 @@
 ## Instruktioner:
 
 Du måste ha enkely.py filen i samma mapp som din kodfil är i.
-	Ex. om du har en fil som heter 'kod.e' så kör du den genom att skriva:
-	´´´bash
-	$ python3 enkely.py kod.e
-	´´´
-	I terminalen.
+Ex. om du har en fil som heter 'kod.e' så kör du den genom att skriva:
+´´´
+$ python3 enkely.py kod.e
+´´´
+I terminalen.
 
 ## Syntax fil för Sublime Text 3:
 
@@ -16,6 +16,6 @@ Kopiera filen 'Enkelt.sublime-syntax' till din konfigurations mapp för Sublime 
 (På linux är den: .config/sublime-text-3/Packages/User/).
 
 ## Läs mera och få hjälp på
-[https://buscedv.github.io/Enkelt](Enkelt webbsidan)
+[Enkelt webbsidan](https://buscedv.github.io/Enkelt)
 
 Edvard Busck-Nielsen 2019
