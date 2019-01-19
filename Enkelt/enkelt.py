@@ -3,7 +3,7 @@
 # A simple programming language with Swedish syntax.
 # Ett simpelt programeringspråk med Svensk syntax.
 # https://buscedv.github.io/Enkelt
-# 2.3
+# 2.4
 
 # Edvard Busck-Nielsen, hereby disclaims all copyright interest in the program “Enkelt” (which is a programming language with swedish syntax) written by Edvard Busck-Nielsen.
 
@@ -290,6 +290,14 @@ def parse_expr(expr, line):
 	first_var_stat = False
 	second_var_stat = False
 	lex_index = False
+
+	if "=" not in expr and "!" not in expr and "<" not in expr and ">" not in expr and "$" in expr:
+		if expr[1:] in Global_Variables:
+			if Global_Variables[expr[1:]] == "Sant":
+				return (True)
+		else:
+			print ("Error linje "+str(line)+" variabeln '"+expr[1:]+"' hittades inte!")
+			return (False)
 
 	for chr in expr:
 		if lex_second:
