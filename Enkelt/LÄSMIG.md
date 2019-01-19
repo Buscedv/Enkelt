@@ -11,6 +11,14 @@ $ python3 enkelt.py kod.e
 
 I terminalen.
 
+## Enkelt Konsol:
+
+Det finns ett skript som heter enkelt_konsol.py. Det är en interaktiv konsol som sndvänder Enkelt.
+Starta konolen med att skriva följande i terminalen:
+```bash
+$ python3 enkelt_konsol.py
+```
+
 ## Syntax fil för Sublime Text 3:
 
 I mappen finns det en .sublime-syntax fil som ger sublime text3 syntax för Enkelt.
