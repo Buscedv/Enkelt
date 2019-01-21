@@ -38,7 +38,7 @@
 </head> 
 
 <body class="body-pink">
-    <a href="#header" id="to_top_btn" class="scrollto"> <i class="fa fa-chevron-up"></i> </a>
+<a id="to_top_btn" class="scrollto" href="#header"> </a>
 <div class="page-wrapper"><!-- ******Header****** --><header id="header" class="header">
 <div class="container">
 <div class="branding">
@@ -47,363 +47,89 @@
 <!--//branding-->
 <ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="index.html">Hem</a></li>
-<li class="breadcrumb-item active">Dokumentation</li>
+<li class="breadcrumb-item active">Snabbstart</li>
 </ol>
 </div>
 <!--//container--></header><!--//header-->
 <div class="doc-wrapper">
 <div class="container">
 <div id="doc-header" class="doc-header text-center">
-<h1 class="doc-title">Dokumentation</h1>
-<div class="meta">Senast usppdaterad: Dec 23, 2018</div>
+<h1 class="doc-title">Snabbstart</h1>
+<div class="meta">Senast uppdaterad: Dec 23, 2018</div>
 </div>
 <!--//doc-header-->
 <div class="doc-body row">
 <div class="doc-content col-md-9 col-12 order-1">
 <div class="content-inner">
-<section id="skriv" class="doc-section">
-<h2 class="section-title">Skriv ()</h2>
-<ul style="font-size: 14px;">
-<li><a class="nav-link scrollto" href="#skriv1">Text/String</a></li>
-<li><a class="nav-link scrollto" href="#skriv2">Variabel</a></li>
-<li><a class="nav-link scrollto" href="#skriv3">Sak fr&aring;n lista</a></li>
-</ul>
-<div id="skriv1" class="section-block">
-<p><em>Skriv ()</em> funktionen skriver text och/eller data till konsolen. <em>Skriv ()</em> funktionen kan inte l&auml;ggas in i andra fuktioner.</p>
+<section id="download-section" class="doc-section">
+<h2 class="section-title">Ladda ner Enkelt</h2>
+<div class="section-block">
+<p>Du m&aring;ste b&ouml;rja med att ladda ner Enkelt. Klicka p&aring; den gr&ouml;na knappen under f&ouml;r att b&ouml;rja nerladdningen. Enkelt kan andv&auml;ndas p&aring; <em>Mac OSX, Windows och Linux</em>. Mac OSX och Linux versionen &auml;r den samma medan Windows har ett annat program. F&ouml;r att kunna andv&auml;nda Enkelt m&aring;ste du &auml;ven ha tillg&aring;ng till <strong>Terminal</strong> eller <strong>Kommandotolken</strong> (Windows) samt ha <strong>Python</strong> (v. 3 eller h&ouml;gre) installerat.</p>
+<a class="btn btn-green" href="https://buscedv.github.io/LaddaNerEnkelt/#/home?url=https://github.com/Buscedv/Enkelt/tree/master/Enkelt" target="_blank" rel="noopener"> Ladda ner Enkelt</a></div>
+</section>
+<!--//doc-section-->
+<section id="installation-section" class="doc-section">
+<h2 class="section-title">Att andv&auml;nda och starta Enkelt</h2>
+<div id="step1" class="section-block">
+<p>Du k&ouml;r Enkeltkod med f&ouml;ljande kommando. Skriv in kommandot i Terminal p&aring; Mac OSX och Linux eller Kommandotolken p&aring; Windows. Du m&aring;ste &auml;ven vara i samma mapp som Enkelt &auml;r nedladdat i.</p>
 <div class="code-block">
-<h6>Skriv Text/String</h6>
-<p><code>skriv ("Hej V&auml;rlden")</code></p>
+<h6>&Ouml;ppna och k&ouml;r Enkelt</h6>
+<p><code>python3 enkelt.py min_kod.e</code></p>
 </div>
 <!--//code-block--></div>
 <!--//section-block-->
-<div id="other_skriv" class="section-block">
-<h3 class="block-title">Andra till&auml;mpningar av <em>Skriv ()</em>:</h3>
-<p><em>Skriv ()</em> kan skriva olika sorters data. H&auml;r &auml;r alla olika typer fuktionen accepterar:</p>
-<div id="skriv2" class="code-block">
-<h6>Skriv variabel</h6>
-<p><code>skriv ($variabelnamn)</code></p>
+<div id="step2" class="section-block">
+<h3 class="block-title">Enkelt filtypen</h3>
+<p>Du ser att den sista delen av kommandot &auml;r <strong>'min_kod.e'</strong> detta h&auml;nvisar till en <em>kodfil</em> d&auml;r det skrivits Enkeltkod. <strong>'min_kod'</strong> &auml;r <em>filnamnet</em> och <strong>'.e'</strong> &auml;r Enkelts filtyp. Andv&auml;nd alltid <strong>.e</strong> filtypen n&auml;r du g&ouml;r Enkeltkodfiler, Det &auml;r inte <em>n&ouml;dv&auml;ndigt</em> men det &auml;r rekommenderat.</p>
 </div>
-<!--//code-block-->
-<div id="skriv3" class="code-block">
-<h6>Skriv Sak fr&aring;n lista (med indexnummer)</h6>
-<p><code>skriv ($lista[1])</code></p>
+<!--//section-block--></section>
+<!--//doc-section-->
+<section id="code-section" class="doc-section">
+<h2 class="section-title">Hej V&auml;rlden i Enkelt.</h2>
+<div class="section-block">
+<p>"Hej V&auml;rlden" &auml;r ofta det f&ouml;rsta programmet man visar i ett programmeringsspr&aring;k. H&auml;r &auml;r hur du g&ouml;r ett "Hej V&auml;rlden" program i Enkelt.</p>
 </div>
-<!--//code-block-->
+<!--//section-block-->
+<div id="html" class="section-block">
 <div class="callout-block callout-success">
 <div class="icon-holder">&nbsp;</div>
 <!--//icon-holder-->
 <div class="content">
 <h4 class="callout-title">Tips:</h4>
-<p>L&auml;s mera om listor i kapitlet "Listor"</p>
+<p>Testa att experimentera med koden efter att du skrivit "Hej V&auml;rlden" programmet!</p>
 </div>
 <!--//content--></div>
-</div>
-<!--//section-block--></section>
-<!--//doc-section-->
-<section id="var" class="doc-section">
-<h2 class="section-title">Variabler</h2>
-<ul style="font-size: 14px;">
-<li><a class="nav-link scrollto" href="#var1">Text/String</a></li>
-<li><a class="nav-link scrollto" href="#var2">Andv&auml;ndarinput</a></li>
-<li><a class="nav-link scrollto" href="#var3">Nummer</a></li>
-<li><a class="nav-link scrollto" href="#var4">Matematik (nummer)</a></li>
-<li><a class="nav-link scrollto" href="#var5">Matematik (variabler)</a></li>
-<li><a class="nav-link scrollto" href="#var6">Listor</a></li>
-<li><a class="nav-link scrollto" href="#var7">Kombinerade</a></li>
-<li><a class="nav-link scrollto" href="#var8">Sak fr&aring;n lista (indexnummer)</a></li>
-<li><a class="nav-link scrollto" href="#var9">Sak fr&aring;n lista (indexvariabel)</a></li>
-<li><a class="nav-link scrollto" href="#var10">Listl&auml;ngd</a></li>
-<li><a class="nav-link scrollto" href="#var11">Text/String l&auml;ngd</a></li>
-<li><a class="nav-link scrollto" href="#var12">Variabell&auml;ngd</a></li>
-<li><a class="nav-link scrollto" href="#var13">Booleskvariabel</a></li>
-</ul>
-<div id="var1" class="section-block">
-<p>Variabler sparar data under ett namn som kan h&auml;mtas genom att skriva <strong>$</strong> med variabelnamnet efter.</p>
-<div id="var1" class="code-block">
-<h6>Text/String Variabel</h6>
-<p><code>var min_string = "Hej V&auml;rlden"</code></p>
-</div>
-<!--//code-block--></div>
-<!--//section-block-->
-<div id="other_var" class="section-block">
-<h3 class="block-title">Andra variabeldatatyper.</h3>
-<p>Du kan spara <em>text, andv&auml;ndarinput, nummer, matematikl&ouml;sningar, listor, kombinerade variabler, saker fr&aring;n listor (med index), l&auml;ngd av text, nummer och listor (antal saker) och booleskvariabler (sant eller falskt)</em>.</p>
-<div id="var2" class="code-block">
-<h6>Andv&auml;ndarinputvariabel</h6>
-<p><code>var namn = in("Skriv Ditt Namn: ")</code></p>
-</div>
-<!--//code-block-->
-<div id="var3" class="code-block">
-<h6>Nummervariabel</h6>
-<p><code>var num1 = 2</code></p>
-</div>
-<!--//code-block-->
-<div id="var4" class="code-block">
-<h6>Matematikvariabel (med nummer)</h6>
-<p><code>var resultat = matte(2*3)</code></p>
-</div>
-<!--//code-block-->
-<div id="var5" class="code-block">
-<h6>Matematikvariabel (med variabler)</h6>
-<p><code>var resultat = matte($num1 + 3)</code></p>
-</div>
-<!--//code-block-->
-<div id="var6" class="code-block">
-<h6>Listvariabel (text och nummer)</h6>
-<p><code>var ink&ouml;p = ["br&ouml;d", "sm&ouml;r", "&auml;gg", "mj&ouml;lk", 1, 4]</code></p>
-</div>
-<!--//code-block-->
-<div id="var7" class="code-block">
-<h6>Kombineradevariabler</h6>
-<p><code>var tittel = "Hej, " + $namn</code></p>
-</div>
-<!--//code-block-->
-<div id="var8" class="code-block">
-<h6>Sak fr&aring;n lista-variabel (med indexnummer)</h6>
-<p><code>var sm&ouml;r = $ink&ouml;p[1]</code></p>
-</div>
-<!--//code-block-->
-<div id="var9" class="code-block">
-<h6>Sak fr&aring;n lista-variabel (med index fr&aring;n variabel)</h6>
-<p><code>var sm&ouml;r = $ink&ouml;p[$indx]</code></p>
-</div>
-<!--//code-block-->
-<div id="var10" class="code-block">
-<h6>Listl&auml;ngdvariabel</h6>
-<p><code>var min_lista = l&auml;ngd($lista1)</code></p>
-</div>
-<!--//code-block-->
-<div id="var11" class="code-block">
-<h6>Text/String l&auml;ngd-variabel</h6>
-<p><code>var min_text = l&auml;ngd("Hej")</code></p>
-</div>
-<!--//code-block-->
-<div id="var12" class="code-block">
-<h6>Variabell&auml;ngdvariabel</h6>
-<p><code>var min_text = l&auml;ngd($text)</code></p>
-</div>
-<!--//code-block--></div>
-<!--//code-block-->
-<div id="var13" class="code-block">
-<h6>Booleskvariabel (sant eller falskt)</h6>
-<p><code>var bool = Sant</code></p>
-<p><code>var bool = Falskt</code></p>
-</div>
-<!--//section-block--></section>
-<!--//doc-section-->
-<section id="list" class="doc-section">
-<h2 class="section-title">Listor</h2>
-<ul style="font-size: 14px;">
-<li><a class="nav-link scrollto" href="#list1">G&ouml;r en ny lista</a></li>
-<li><a class="nav-link scrollto" href="#list2">L&auml;gg till sak</a></li>
-<li><a class="nav-link scrollto" href="#list3">Ta bort sak</a></li>
-</ul>
-<div id="other_list" class="section-block">
-<p>Listor &auml;r en variabeldatatyp d&auml;r du kan spara flera texter, mummer etc. i samma variabel och under samma variabelnamn. <strong>Ex.</strong><br /> Listan <em>ink&ouml;p</em> ser ut s&aring; h&auml;r: <em>["br&ouml;d", "&auml;gg", "mj&ouml;k"]</em> Om vi kallar listan <em>ink&ouml;p</em>, kan man skriva ut hela listan med att skriva: <em>skriv ($ink&ouml;p)</em> D&aring; ser man hela listan, men om du vill f&aring; ut en skild sak fr&aring;n listan m&aring;ste du specificera sakens <strong>indexnummer</strong>. Varje sak i listan har ett eget indexnummer. <em>'br&ouml;d'</em> har d&aring; indexen <strong>0</strong> eftersom <em>'br&ouml;d'</em> &auml;r den <strong>f&ouml;rsta</strong> saken i listan och listor b&ouml;rjar fr&aring;n <em>0</em> inte <em>1</em>!</p>
-<div class="callout-block callout-success">
-<div class="icon-holder">&nbsp;</div>
-<!--//icon-holder-->
-<div class="content">
-<h4 class="callout-title">OBS Indexnummer!</h4>
-<p>Kom ih&aring;g att listor alltid <strong>b&ouml;rjar med 0 och inte 1</strong></p>
-</div>
-<!--//content--></div>
-<div id="list1" class="code-block">
-<h6>G&ouml;r en ny lista</h6>
-<p><code>var ink&ouml;p = ["br&ouml;d", "&auml;gg", "mj&ouml;lk"]</code></p>
-</div>
-<!--//code-block--></div>
-<!--//section-block-->
-<div id="other_list" class="section-block">
-<h3 class="block-title">Andra listfunktioner</h3>
-<p>Du kan se hur man andv&auml;nder listor med variabler under <strong>variabelsektionen</strong> av dokumentationen, h&auml;r &auml;r endast de specifika funktionerna som bara listor har!</p>
-<div id="list2" class="code-block">
-<h6>L&auml;gg till sak</h6>
-<p><code>$ink&ouml;p.till("sm&ouml;r")</code></p>
-</div>
-<!--//code-block-->
-<div id="list3" class="code-block">
-<h6>Ta bort sak fr&aring;n lista</h6>
-<p><code>$ink&ouml;p.bort[2]</code></p>
-</div>
-<!--//code-block--></div>
-<!--//section-block--></section>
-<!--//doc-section-->
-<section id="math" class="doc-section">
-<h2 class="section-title">Matte ()</h2>
-<ul style="font-size: 14px;">
-<li><a class="nav-link scrollto" href="#math1">Addition</a></li>
-<li><a class="nav-link scrollto" href="#math2">Subtraktion</a></li>
-<li><a class="nav-link scrollto" href="#math3">Multiplikation</a></li>
-<li><a class="nav-link scrollto" href="#math4">Division</a></li>
-<li><a class="nav-link scrollto" href="#math5">Modulor&auml;kning</a></li>
-</ul>
-<div id="step1" class="section-block">
-<p><em>Matte ()</em> funktionen kan andv&auml;ndas sj&auml;lv eller s&auml;ttas in i variabler. <em>Matte ()</em> funktionen tar in tv&aring; tal i antingen nummerform (heltal) eller nummervariabelform samt ett uttryck (+, -, *, /, %).</p>
-<div id="math1" class="code-block">
-<h6>Addition</h6>
-<p><code>matte (1+2)</code></p>
-</div>
-<!--//code-block--></div>
-<!--//section-block-->
-<div id="step2" class="section-block">
-<h3 class="block-title">Andra r&auml;knes&auml;tt</h3>
-<p>Du kan kombinera variabler med nummer s&aring; h&auml;r: <em>(1+2)</em> eller <em>($num1+$num2)</em> eller <em>(1+$num1)</em> eller <em>($num2+3)</em>.</p>
-<div id="math2" class="code-block">
-<h6>Subtraktion</h6>
-<p><code>matte (1-2)</code></p>
-</div>
-<!--//code-block-->
-<div id="math3" class="code-block">
-<h6>Multiplikation</h6>
-<p><code>matte (1*2)</code></p>
-</div>
-<!--//code-block-->
-<div id="math4" class="code-block">
-<h6>Division</h6>
-<p><code>matte (1/2)</code></p>
-</div>
-<!--//code-block-->
-<div id="math5" class="code-block">
-<h6>Modulor&auml;kning</h6>
-<p><code>matte (1%2)</code></p>
-</div>
-<!--//code-block--></div>
-<!--//section-block--></section>
-<!--//doc-section-->
-<section id="ifelse" class="doc-section">
-<h2 class="section-title">Om () &amp; Annars ()</h2>
-<ul style="font-size: 14px;">
-<li><a class="nav-link scrollto" href="#ifelse1">Uttryck</a></li>
-</ul>
-<div id="other_annars" class="section-block">
-<p><em>Om ()</em> och <em>Annars ()</em> g&aring;r hand i hand och fungerar tillsammans. <em>Om ()</em> l&aring;ter dig testa olika saker. Du kan t.ex. kolla om en variabel &auml;r lika med &auml;n annan variabel, om ett nummer &auml;r st&ouml;rre &auml;n ett annat nummer osv. Om uttrycket i <em>Om ()</em> st&auml;mmer k&ouml;rs koden inuti <em>Om ()</em> parenteserna <strong>{}</strong> medan koden inuti <em>Annars ()</em> parenteser <strong>{}</strong> bara k&ouml;rs om uttrycket i <em>Om ()</em> &auml;r falsk/inte st&auml;mmer. Du kan bara anv&auml;nda <em>Annars ()</em> om du ocsk&aring; anv&auml;nder <em>Om ()</em>, men du kan anv&auml;nda <em>Om ()</em> ensamt. <br /> H&auml;r &auml;r n&aring;gra exempel p&aring; hur du andv&auml;nder <em>Om ()</em> och <em>Annars ()</em>:</p>
-<div class="code-block">
-<h6>Kolla om ett tal &auml;r st&ouml;re &auml;n ett annant:</h6>
-<pre><code class="language-python">var num1 = 2
-var num2 = 4
-om ($num1 &gt; $num2) {
-    skriv ("St&ouml;rre &auml;n!")
-}
-annars {
-    skriv ("Inte st&ouml;rre &auml;n!")
-}
-                                            </code></pre>
-<div class="code-block">
-<h6>Utput:</h6>
-<p><code>Inte st&ouml;rre &auml;n!</code></p>
-</div>
-<p><!--//code-block--></p>
-</div>
-<!--//code-block-->
-<div class="code-block">
-<h6>Kolla vad anv&auml;ndaren skrev</h6>
-<pre><code class="language-python">var namn = in ("Skriv Ditt Namn: ")
-om ($namn = "Jonas") {
-    skriv ("Hej Jonas")
-}
-                                            </code></pre>
-<div class="code-block">
-<h6>Utput:</h6>
-<pre><code class="language-python">Skriv Ditt Namn: Jonas
-Hej Jonas
-                                                    </code></pre>
-</div>
-<p><!--//code-block--></p>
-</div>
-<!--//code-block--></div>
-<!--//section-block-->
-<div id="ifelse1" class="section-block">
-<h3 class="block-title">Uttryck</h3>
-<p>Du kan anv&auml;nda dig av n&aring;gra olika uttryck i <em>Om ()</em>.</p>
 <div class="section-block">
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th>Uttryck</th>
-<th>Beskrivning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row">=</th>
-<td>Lika med/samma</td>
-</tr>
-<tr>
-<th scope="row">!</th>
-<td>Inte lika med/olika</td>
-</tr>
-<tr>
-<th scope="row">&lt;</th>
-<td>Mindre &auml;n (bara nummer)</td>
-</tr>
-<tr>
-<th scope="row">&gt;</th>
-<td>St&ouml;rre &auml;n (bara nummer)</td>
-</tr>
-</tbody>
-</table>
-<div class="callout-block callout-success">
+<p>G&ouml;r en ny texfil och kalla den <em>kod.e</em> eller n&aring;got liknande. <br /> &Ouml;ppna filen i vilken textredigerare som helst (om du andv&auml;nder Sublime Text3 kan du ladda ner en syntaxfil f&ouml;r Enkelt <a href="https://buscedv.github.io/LaddaNerEnkelt/#/home?url=https://github.com/Buscedv/Enkelt/tree/master/Enkelt/Enkelt.sublime-syntax">h&auml;r</a>) <br /> Skriv sedan f&ouml;ljande:</p>
+</div>
+<!--//section-block-->
+<div class="code-block">
+<h6>Enkelt koden f&ouml;r Hej V&auml;rlden</h6>
+<pre><code class="language-python">skriv ("Hej V&auml;rlden!")</code></pre>
+</div>
+<!--//code-block-->
+<div class="section-block">
+<p>Spara sedan filen och &ouml;ppna Terminal/Kommandotolken och skriv: </p>
+<pre><code class="language-python">python3 enkelt.py kod.e</code></pre>
+<br />
+<p>Ers&auml;tt <em>'kod.e'</em> med det filnamn du valt. K&ouml;r sedan kommandot! <br /> Om du ser texten "Hej V&auml;rlden" gjorde du r&auml;tt och koden fungerar! Om du inte fick r&auml;tt utput, g&aring; tillbaka och kolla om du gjorde ett stavfel.</p>
+<div class="callout-block callout-info">
 <div class="icon-holder">&nbsp;</div>
 <!--//icon-holder-->
 <div class="content">
-<h4 class="callout-title">Booleskvariabler</h4>
-<p>Du behöver inte skriva ett uttryck om du använder en <strong>booleskvariabel</strong>.</p>
+<h4 class="callout-title">Gratulerar</h4>
+<p>Du har nu gjort ditt f&ouml;rsta Enkeltprogram! Du kan nu g&aring; till den kompletta dokumentationen f&ouml;r att l&auml;ra dig mera</p>
 </div>
 <!--//content--></div>
-</div>
-<!--//table-responsive--></div>
+<!--//callout-block--></div>
 <!--//section-block--></div>
-<!--//section-block--></section>
-<!--//doc-section-->
-<section id="comments" class="doc-section">
-<h2 class="section-title">Kommentarer</h2>
-<div id="step1" class="section-block">
-<p>Kommentarer &auml;r linjer i din kod som ignoreras n&auml;r koden k&ouml;rs. Detta &auml;r praktiskt om du vill organisera din kod och g&ouml;ra den enklare att f&ouml;rst&aring; med hj&auml;lp av f&ouml;rklaringar, titlar mm. Alla linjer som b&ouml;rjar med <em>#</em> &auml;r en <strong>kommentar</strong>.</p>
-<div class="code-block">
-<h6>Ex.</h6>
-<pre><code class="language-python">skriv ("Hej V&auml;rlden!")
-# Detta &auml;r en kommentar
-# skriv ("hej")
-skriv ("Test 123...")</code></pre>
-</div>
-<!--//code-block-->
-<div class="code-block">
-<h6>Utput</h6>
-<pre><code class="language-bash">
-Hej V&auml;rlden!
-Test 123...
-                                        </code></pre>
-</div>
-<!--//code-block--></div>
-<!--//section-block--></section>
-<!--//doc-section-->
-<section id="clear" class="doc-section">
-<h2 class="section-title">T&ouml;m</h2>
-<div id="step1" class="section-block">
-<p><em>T&ouml;m</em> kommandot t&ouml;mmer konsolen (Terminal, Kommandotolken). Detta kan vara praktiskt om din kod beh&ouml;ver visa mycket information.</p>
-<div class="code-block">
-<h6>Ex.</h6>
-<pre><code class="language-python">skriv ("Hej V&auml;rlden!")
-t&ouml;m
-skriv ("Test")</code></pre>
-</div>
-<!--//code-block-->
-<div class="code-block">
-<h6>Utput</h6>
-<pre><code class="language-bash">
-Test
-                                        </code></pre>
-</div>
-<!--//code-block--></div>
 <!--//section-block--></section>
 <!--//doc-section--></div>
 <!--//content-inner--></div>
 <!--//doc-content-->
-<div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex" style="height: auto;">
-<div id="doc-nav" class="doc-nav"><nav id="doc-menu" class="nav doc-menu flex-column sticky"><a class="nav-link scrollto" href="#skriv">Skriv ()</a> <a class="nav-link scrollto" href="#var">Variabler</a> <a class="nav-link scrollto" href="#list">Listor</a> <a class="nav-link scrollto" href="#math">Matte ()</a> <a class="nav-link scrollto" href="#ifelse">Om / Annars</a> <a class="nav-link scrollto" href="#comments">Kommentarer</a> <a class="nav-link scrollto" href="#clear">T&ouml;m</a> <a class="nav-link scrollto" href="#testa">Testa Enkelt!</a></nav><!--//doc-menu--></div>
-<!--//doc-nav--></div>
+<div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+<div id="doc-nav" class="doc-nav"><nav id="doc-menu" class="nav doc-menu flex-column sticky"><a class="scrollto" href="#download-section">Ladda ner Enkelt</a> <a class="nav-link scrollto" href="#installation-section">Att andv&auml;nda Enkelt</a><nav class="doc-sub-menu nav flex-column"><a class="nav-link scrollto" href="#step1">K&ouml;r Enkelt</a> <a class="nav-link scrollto" href="#step2">Enkelt filtypen</a></nav><!--//nav--> <a class="nav-link scrollto" href="#code-section">Hej V&auml;rlden i Enkelt</a><nav class="doc-sub-menu nav flex-column"><a class="nav-link scrollto" href="#html">Koden</a></nav><!--//doc-menu--> <a class="nav-link scrollto" href="#testa">Testa Enkelt</a></nav></div>
+</div>
 <!--//doc-sidebar--></div>
 <!--//doc-body--> <br /> <br />
 <h3 id="testa">Testa Enkelt i webbl&auml;saren!</h3>
@@ -411,7 +137,7 @@ Test
 <!--//container--></div>
 <!--//doc-wrapper--></div>
 <footer id="footer" class="footer text-center">
-<div class="container"><!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */--> <small class="copyright">&copy; Edvard Busck-Nielsen 2018</small></div>
+<div class="container"><!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */--> <small class="copyright">&copy; Edvard Busck-Nielsen 2019</small></div>
 <!--//container--></footer>
 	 <!-- Main Javascript -->          
     <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
