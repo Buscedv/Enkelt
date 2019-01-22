@@ -440,25 +440,26 @@
                                 <div id="other_annars" class="section-block">
                                     <p>
                                         <em>Om ()</em> och
-                                        <em>Annars ()</em> g&aring;r hand i hand och fungerar tillsammans.
-                                        <em>Om ()</em> l&aring;ter dig testa olika saker. Du kan t.ex. kolla om en variabel &auml;r lika med &auml;n annan variabel, om ett nummer &auml;r st&ouml;rre &auml;n ett annat nummer osv. Om uttrycket i
-                                        <em>Om ()</em> st&auml;mmer k&ouml;rs koden inuti
+                                        <em>Annars ()</em> går hand i hand och fungerar tillsammans.
+                                        <em>Om ()</em> låter dig testa olika saker. Du kan t.ex. kolla om en variabel är lika med en annan variabel, om ett nummer är större än ett annat nummer osv. Om uttrycket i
+                                        <em>Om ()</em> stämmer körs koden inuti
                                         <em>Om ()</em> parenteserna
                                         <strong>{}</strong> medan koden inuti
                                         <em>Annars ()</em> parenteser
-                                        <strong>{}</strong> bara k&ouml;rs om uttrycket i
-                                        <em>Om ()</em> &auml;r falsk/inte st&auml;mmer. Du kan bara anv&auml;nda
-                                        <em>Annars ()</em> om du ocsk&aring; anv&auml;nder
-                                        <em>Om ()</em>, men du kan anv&auml;nda
+                                        <strong>{}</strong> bara körs om uttrycket i
+                                        <em>Om ()</em> &auml;r falsk/inte stämmer. Du kan bara använda
+                                        <em>Annars ()</em> om du också använder
+                                        <em>Om ()</em>, men du kan använda
                                         <em>Om ()</em> ensamt.
-                                        <br /> H&auml;r &auml;r n&aring;gra exempel p&aring; hur du andv&auml;nder
+                                        <br /> Här är några exempel på hur du använder
                                         <em>Om ()</em> och
                                         <em>Annars ()</em>:
                                     </p>
+                    
                                     <div class="code-block">
                                         <h6>Kolla om ett tal &auml;r st&ouml;re &auml;n ett annant:</h6>
                                         <pre>
-											<code class="language-python">var num1 = 2
+                                            <code class="language-python">var num1 = 2>
 var num2 = 4
 om ($num1 &gt; $num2) {
     skriv ("St&ouml;rre &auml;n!")
@@ -467,40 +468,34 @@ annars {
     skriv ("Inte st&ouml;rre &auml;n!")
 }
                                             </code>
-										</pre>
-                                        <div class="code-block">
-                                            <h6>Utput:</h6>
-                                            <p>
-                                                <code>Inte st&ouml;rre &auml;n!</code>
-                                            </p>
-                                        </div>
-                                        <p>
-                                            <!--//code-block-->
-                                        </p>
+                                        </pre>
                                     </div>
-                                    <!--//code-block-->
-                                    <div class="code-block">
-                                        <h6>Kolla vad anv&auml;ndaren skrev</h6>
-                                        <pre>
-											<code class="language-python">var namn = in ("Skriv Ditt Namn: ")
-om ($namn = "Jonas") {
-    skriv ("Hej Jonas")
-}
-                                            </code>
-										</pre>
                                     <div class="code-block">
                                         <h6>Utput:</h6>
                                         <pre>
-											<code class="language-python">Skriv Ditt Namn: Jonas
-Hej Jonas
+                                            <code>
+Inte st&ouml;rre &auml;n!
                                             </code>
-										</pre>
+                                        </pre>
                                     </div>
-                                        <p>
-                                            <!--//code-block-->
-                                        </p>
-                                    </div>
-                                    <!--//code-block-->
+                                </div>
+                                <div class="code-block">
+                                    <h6>Kolla vad anv&auml;ndaren skrev</h6>
+                                    <pre>
+                                        <code class="language-python">var namn = in ("Skriv Ditt Namn: ")
+om ($namn = "Jonas") {
+    skriv ("Hej Jonas")
+}
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="code-block">
+                                    <h6>Utput:</h6>
+                                    <pre>
+                                        <code class="language-python">Skriv Ditt Namn: Jonas
+Hej Jonas
+                                        </code>
+                                    </pre>
                                 </div>
                                 <!--//section-block-->
                                 <div id="ifelse1" class="section-block">
@@ -566,22 +561,22 @@ Hej Jonas
                                     <div class="code-block">
                                         <h6>Ex.</h6>
                                         <pre>
-											<code class="language-python">skriv ("Hej V&auml;rlden!")
+                                            <code class="language-python">skriv ("Hej V&auml;rlden!")
 # Detta &auml;r en kommentar
 # skriv ("hej")
 skriv ("Test 123...")
                                             </code>
-										</pre>
+                                        </pre>
                                     </div>
                                     <!--//code-block-->
                                     <div class="code-block">
                                         <h6>Utput</h6>
                                         <pre>
-											<code class="language-bash">
+                                            <code class="language-bash">
 Hej V&auml;rlden!
 Test 123...
                                             </code>
-										</pre>
+                                        </pre>
                                     </div>
                                     <!--//code-block-->
                                 </div>
@@ -597,20 +592,20 @@ Test 123...
                                     <div class="code-block">
                                         <h6>Ex.</h6>
                                         <pre>
-											<code class="language-python">skriv ("Hej V&auml;rlden!")
+                                            <code class="language-python">skriv ("Hej V&auml;rlden!")
 t&ouml;m
 skriv ("Test")
                                             </code>
-										</pre>
+                                        </pre>
                                     </div>
                                     <!--//code-block-->
                                     <div class="code-block">
                                         <h6>Utput</h6>
                                         <pre>
-											<code class="language-bash">
+                                            <code class="language-bash">
 Test
                                             </code>
-										</pre>
+                                        </pre>
                                     </div>
                                     <!--//code-block-->
                                 </div>
