@@ -3,7 +3,7 @@
 # A simple programming language with Swedish syntax.
 # Ett simpelt programeringspråk med Svensk syntax.
 # https://buscedv.github.io/Enkelt
-# 2.4
+# 2.5
 
 # Edvard Busck-Nielsen, hereby disclaims all copyright interest in the program “Enkelt” (which is a programming language with swedish syntax) written by Edvard Busck-Nielsen.
 
@@ -73,7 +73,7 @@ def interpreter(code):
 						os.system('clear')
 						cmd = ""
 						break
-					elif cmd == "skriv" and line[-1] == ")" and "(" in line:
+					elif cmd == "skriv" and ")" in line and "(" in line:
 						print(print_func(line, i))
 						cmd = ""
 						break
@@ -107,7 +107,7 @@ def interpreter(code):
 								os.system('clear')
 								cmd = ""
 								break
-							elif cmd == "skriv" and line[-1] == ")" and "(" in line:
+							elif cmd == "skriv" and ")" in line and "(" in line:
 								print(print_func(line, i))
 								cmd = ""
 								break
@@ -1138,7 +1138,7 @@ def print_func(code, line):
 				print_stat_first = True
 				print_stat = True
 			elif print_stat:
-				if print_stat_chr:
+				if print_stat_chr and chr != ' ':
 					string += chr
 				elif chr == '$' and print_stat_first:
 					print_stat_chr = True
@@ -1158,7 +1158,7 @@ def print_func(code, line):
 			elif print_stat:
 				if chr == '"' and print_stat_end:
 					string += chr
-				elif print_stat_chr:
+				elif print_stat_chr and chr != '"':
 					string += chr
 				elif chr == '"' and print_stat_first:
 					print_stat_chr = True
@@ -1178,7 +1178,7 @@ def print_func(code, line):
 	elif is_list:
 		return string
 	else:
-		return string[:-1]
+		return string
 
 Global_Variables = {}
 global_if = False
