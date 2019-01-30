@@ -2,6 +2,10 @@ body {
   font-family: 'Open Sans', arial, sans-serif;
 }
 
+* {
+  font-family: 'Open Sans';
+}
+
 #logo_res {
 	width: 100%;
 	max-width: 600px;
@@ -82,4 +86,8 @@ input[type=submit]:hover {
 .bg-success {
   background-color: #3B3B3B !improtant;
   color: #ffffff !improtant;
+}
+
+li {
+  font-family: 'Open Sans';
 }

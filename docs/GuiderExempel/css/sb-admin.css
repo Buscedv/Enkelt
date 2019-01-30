@@ -431,3 +431,7 @@ body.sidebar-toggled footer.sticky-footer {
   background-color: #40babd!important;
   color: #ffffff!important;
 }
+
+li {
+  font-family: 'Open Sans';
+}
