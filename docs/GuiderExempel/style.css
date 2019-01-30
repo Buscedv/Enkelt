@@ -1,5 +1,8 @@
+html {
+  font-family: 'Open Sans'!important;
+}
 body {
-  font-family: 'Open Sans', arial, sans-serif;
+  font-family: 'Open Sans';
 }
 
 * {

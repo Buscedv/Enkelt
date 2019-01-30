@@ -7,12 +7,12 @@
 html {
   position: relative;
   min-height: 100%;
-  font-family: 'Open Sans', arial, sans-serif;
+  font-family: 'Open Sans';
 }
 
 body {
   height: 100%;
-  font-family: 'Open Sans', arial, sans-serif;
+  font-family: 'Open Sans';
 }
 
 #wrapper {
