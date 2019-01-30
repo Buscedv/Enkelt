@@ -7,10 +7,12 @@
 html {
   position: relative;
   min-height: 100%;
+  font-family: 'Open Sans', arial, sans-serif;
 }
 
 body {
   height: 100%;
+  font-family: 'Open Sans', arial, sans-serif;
 }
 
 #wrapper {
@@ -375,12 +377,12 @@ body.sidebar-toggled footer.sticky-footer {
   }
 }
 #active_dropdown {
-  background-color: #00ab44;
+  background-color: #40babd;
   border: none;
 }
 
 #home_link {
-  color: #00ab44;
+  color: #40babd;
 }
 
 .dropdown-item:active {
@@ -418,4 +420,14 @@ body.sidebar-toggled footer.sticky-footer {
 #mark_var {
   color: #5D791C;
   background-color: #1C1C1C;
+}
+
+.bg-success {
+  background-color: #75c181!important;
+  color: #ffffff!important;
+}
+
+.bg-primary {
+  background-color: #40babd!important;
+  color: #ffffff!important;
 }
