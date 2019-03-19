@@ -7,7 +7,7 @@ while action == True:
     if filename == "" and file == "":
         continue
     elif filename == "" and file != "":
-        cmd = "python K:\\Omat\\enkelt.py K:\Omat\\"+file
+        cmd = "python K:\\Omat\\enkelt.py K:\\Omat\\"+file
         os.system(cmd)
         tmp = input(">>>: ")
         if tmp == "":
@@ -16,7 +16,7 @@ while action == True:
             action = False
     elif filename != "":
         file = filename
-        cmd = "python K:\\Omat\\enkelt.py K:\Omat\\"+file
+        cmd = "python K:\\Omat\\enkelt.py K:\\Omat\\"+file
         os.system(cmd)
         tmp = input(">>>: ")
         if tmp == "":
