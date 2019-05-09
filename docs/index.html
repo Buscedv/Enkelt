@@ -31,6 +31,19 @@
 
   gtag('config', 'UA-123148803-3');
 </script>
+	
+<!-- at the end of the HEAD -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+
+<!-- at the end of the BODY -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js">
+<script type="text/javascript"> docsearch({
+apiKey: '343c1e0fd09901935bdf7c22000dac5c',
+indexName: 'enkelt',
+inputSelector: .search_box,
+debug: false // Set debug to true if you want to inspect the dropdown
+});
+</script>
 
 </head> 
 
@@ -63,6 +76,10 @@
                 <div class="tagline">
                     <p>Dokumentation och guider för Enkelt v. 2</p>
                     <p></p>
+                    <form>
+                    	<input type="text" name="search" class="search_box">
+                    </form>
+		
                 </div><!--//tagline-->
                 <div class="social-container">
 	                <!-- Replace with your Github Button -->
