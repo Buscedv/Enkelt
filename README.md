@@ -4,4 +4,4 @@ The world's first Swedish programming language! Enkelt is a programming language
  Läs mer/Read more https://enkelt.ml
  
  # Vill du utveckla Enkelt?
- Kolla in Enkelt-Dev repon: https://github.com/Buscedv/Enkelt-Dev
+ Kolla in Enkelt-Dev repon: https://github.com/Enkelt/Enkelt-Dev
