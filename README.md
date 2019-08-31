@@ -1,7 +1,2 @@
-# Enkelt
-Världens första svenska programmeringsspråk! Enkelt är ett programmeringsspråk med svensk syntax.
-The world's first Swedish programming language! Enkelt is a programming language with Swedish syntax.
- Läs mer/Read more https://enkelt.ml
- 
- # Vill du utveckla Enkelt?
- Kolla in Enkelt-Dev repon: https://github.com/Enkelt/Enkelt-Dev
+# Enkelt har flyttat till! Enkelt finns nu på (https://enkelt.io)[enkelt.io] och (https://github.com/Enkelt/Enkelt/)[https://github.com/Enkelt/Enkelt/]
+Archive mappen innehåller Enkelt 2.6
